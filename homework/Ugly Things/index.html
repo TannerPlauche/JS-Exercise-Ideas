@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="UglyThingsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Things App</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/app.css">
+</head>
+<body >
+    <div id="header" class="form-group">
+        <div>
+            <label for="usr1">Title:</label>
+            <input type="text" class="form-control" id="usr1">
+        </div>
+        <div>
+            <label for="usr2">Img Link:</label>
+            <input type="text" class="form-control" id="usr2">
+        </div>
+        <div>
+
+            <label for="usr3">Description:</label>
+            <input type="text" class="form-control" id="usr3">
+        </div>
+
+    </div>
+
+
+        <div ng-controller="MainController">
+            <a class="btn-large btn-block btn-primary" type="button">Add Ugly Thing to the List!</a>
+            <div class="listOfuglyThings" ng-repeat="thing in uglyThings">
+
+                <h1>Title: {{thing.title}}</h1>
+                <h1 class = "uglyImage">Image: <img src="{{thing.url}}" alt=""></h1>
+                <h3>Description: {{thing.description}}</h3>
+            </div>
+
+       </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

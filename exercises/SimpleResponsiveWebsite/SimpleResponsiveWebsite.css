@@ -1,0 +1,24 @@
+#lefty{
+  background-color: orange;
+  height: 400px;
+  border: 10px solid white;
+}
+/*#righty{
+  background-color: purple;
+  height: 100px;
+  border: 10px solid white;
+}*/
+
+#red {
+ background-color: red;
+ height: 40px;
+ border: 10px solid white;
+
+}
+
+#blue{
+  background-color: blue;
+  height: 60px;
+  border: 10px solid white;
+
+}
