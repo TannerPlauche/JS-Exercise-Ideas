@@ -1,0 +1,61 @@
+h<!DOCTYPE html>
+<html lang="en" ng-app="angularNameBadge">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Name Badge</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="js/app.css">
+</head>
+
+<!-- Tell me about yourself -->
+<body ng-controller="MainController">
+
+    <div class="form"  class="container">
+        <div class="row form-group" >
+           <form ng-submit="updateBadge()">
+                <input type="text" class="formInput col-xs-4 col-xs-offset-1" ng-model="person.firstName" id="firstName" placeholder="First Name"> 
+                <input type="text" class="formInput col-xs-4 col-xs-offset-1" ng-model="person.lastName" id="lastName" placeholder="Last Name">
+                <input type="text" class="formInput col-xs-4 col-xs-offset-1" ng-model="person.email" id="email" placeholder="Email">
+                <input type="text" class="formInput col-xs-4 col-xs-offset-1" ng-model="person.placeOfBirth" id="placeOfbirth" placeholder="Place of Birth">
+                <input type="text" class="formInput col-xs-4 col-xs-offset-1" ng-model="person.phone" id="phone" placeholder="Phone">
+                <input type="text" class="formInput col-xs-4 col-xs-offset-1" ng-model="person.favoriteFood" id="favoritFood" placeholder="Favorite Food">
+              </form>   
+         </div>
+        <div class="row formBottom">
+            <input type="text" class="formInput formInput col-xs-10 col-xs-offset-1" ng-model="person.aboutMe" id="tellAboutSelf" placeholder="Tell us about yourself">
+        </div>
+        <br>
+        <button id="submitButton" ng-click="updateBadge()">
+            Submit
+        </button>
+    </div>
+ <br>
+ <br>
+
+    <!-- Name Tag -->
+    <div class="form" class="container">
+        <div class="badgeHeader">Badge</div>
+        <br>
+        <div class="row form-group">
+            <div class="formInput col-xs-4 col-xs-offset-1">{{badge.firstName}}</div>
+            <div class="formInput col-xs-4 col-xs-offset-1">{{badge.lastName}}</div>
+            <div class="formInput col-xs-4 col-xs-offset-1">{{badge.email}}</div>
+            <div class="formInput col-xs-4 col-xs-offset-1">{{badge.placeOfBirth}}</div>
+            <div class="formInput col-xs-4 col-xs-offset-1">{{badge.phone}}</div>
+            <div class="formInput col-xs-4 col-xs-offset-1">{{badge.favoriteFood}}</div>
+        </div>
+        <div class="row formBottom">
+            <div  class="formInput formInput col-xs-10 col-xs-offset-1"  placeholder="Tell us about yourself">{{badge.aboutMe}}</div>
+        </div>
+        <br>
+        <button id="submitButton">
+            Submit
+        </button>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

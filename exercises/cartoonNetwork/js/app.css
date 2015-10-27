@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+.formBlock {
+    background-color: cornsilk;
+}
+
+.cartoonBlock {
+    background-color: deepskyblue;
+    font-family: Garamond; 
+    font-size: 35px;
+    border: 2px white solid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.imageBlock {
+    background-color: white;
+    border-radius: 5px;
+}

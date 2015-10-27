@@ -1,0 +1,32 @@
+.form {
+    margin: auto;
+    border: 2px black solid;
+    border-radius: 10px;
+    width: 50vw;
+}
+
+#submitButton {
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.formInput {
+    border: 2px black solid;
+}
+/*
+.formBottom {
+    margin: auto;
+}*/
+
+#tellAboutSelf {
+    height: 200px;
+
+}
+
+.badgeHeader {
+    height: 20px;
+    background-color: #262626;
+    border-radius: 5px;
+    color: beige;
+}

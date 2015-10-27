@@ -1,17 +1,40 @@
 var app = angular.module("UglyThingsApp", []);
 
-app.controller("MainController", function( $scope){
+app.controller("MainController", function($scope){
 
-    $scope.uglyThings = [
-        {
-            title: 'title',
-            url: 'http://cdn.toonvectors.com/images/2/5914/toonvectors-5914-940.jpg',
-            description: 'description'
-        },
-        {
-            title: 'Ugly Rabbit',
-            url: 'http://cdn.toonvectors.com/images/2/5914/toonvectors-5914-940.jpg',
-            description: 'This is a picture of a funky looking rabbit.'
+    $scope.uglyThings = [];
+
+    $scope.title = null;
+    $scope.input = null;
+    $scope.description = null;
+
+    $scope.addNewThing = function () {
+        var newuglyThing = {
+            title: $scope.title,
+            url: $scope.input,
+            description: $scope.description,
         }
-    ];
+    $scope.uglyThings.push(newuglyThing);
+    }
+
+});
+
+app.controller("secondController", function($scope){
+
+    $scope.newComment = null;
+
+    $scope.commentArray = ["test string"];
+
+    $scope.addNewComment = function (){
+        var commentGoingToTheArray = $scope.newComment;
+        $scope.commentArray.push(commentGoingToTheArray);
+        $scope.newComment = null;
+        console.log(commentArray);
+    };
+
+    $scope.removeComment = function (comment) {
+        var index = $scope.commentArray.indexOf(comment);
+        $scope.commentArray.splice(index,1);
+    }
+
 });

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CartoonNetwork">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cartoon Network Services Exercise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/app.css">
+</head>
+
+<body ng-controller="MainController">
+    <h1>Cartoon Network</h1>
+    <div class="container formBlock">
+        <div class="row">
+            <form ng-submit="">
+            <br>
+            <br>
+                       <div class="col-xs-6" >
+                    <input ng-model="newShow.title" class="form-control well col-xs-3 col " placeholder="Show Title" type="text">
+                </div>
+                <div class="col-xs-6 " >
+                    <input ng-model="newShow.image" class="form-control well  " placeholder="Image" type="text">
+                </div>
+                <div class="col-xs-12">
+                    <input ng-model="newShow.description" class="form-control well col-xs-3" placeholder="Show Description" type="text">
+                </div>
+                <br>
+                <br>
+                <br>
+                <button class="btn btn-primary submit" ng-click="addShow()" margin="auto">submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="cartoonBlock row  col-xs-offset-4 col-xs-4 col-xs-offset-4" ng-repeat="show in arrayOfShows track by $index">
+        <p class=""> {{show.title}} </p>
+        <img class="imageBlock" ng-src="{{show.image}}">
+        <p class=" "> {{show.description}} </p>
+    
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services/service.js"></script>
+</body>
+
+</html>
