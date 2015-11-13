@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="toDoList">
+
 <head>
-<meta charset="UTF-8">
-<title>To Do List</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="js/app.css">
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="js/app.css">
 </head>
+
 <body ng-controller="MainController">
-   <h1 align="center">I made this into a to-do list cause I like it better that way</h1>
+    <h1 align="center">Ye Olde To Do List</h1>
     <div class="container well">
-        <div class="row col-xs-6 col-xs-offset-3">
-            <div class="enterToDoArea well " placeholder="Enter a to-do-item">
-              <form ng-submit="addItem()" > 
-               <input id="inputBar" type="text" placeholder="Add an item" ng-enter="addItem()" ng-model="toDoItem">
-              </form> 
-                <p> {{toDoItem}} </p>
-                <button class="addItem"  ng-click="addItem()">Add it to the list!</button>
+        <div class="row ">
+            <div class="enterToDoArea well  " placeholder="Enter a to-do-item">
+                <form ng-submit="postData()">
+                    <input class="col-xs-3 col-xs-offset-1" type="text" placeholder="Add an task" ng-enter="postData()" ng-model="toDoItem.title">
+                    <input class="col-xs-3 col-xs-offset-2" type="text" placeholder="Description" ng-enter="postData()" ng-model="toDoItem.description">
+                </form>
+                <!--                <p> {{toDoItem.title}} </p>-->
+                <button class="col-xs-1 col-xs-offset-2  addItem" ng-click="postData()">Add it to the list!</button>
             </div>
-            </div>
-    <div class="row col-xs-6 col-xs-offset-3 well">
-                <div class="toDoItem" ng-repeat="item in toDoList" > 
-                  
-<!--                    <p> {{item.index}} </p>-->
-                    <button class="btn-danger removeItem" ng-click="removeItem(item)">X</button> {{item}}
-                </div>
         </div>
-    </div>    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-    <script src="js/app.js"></script>    
+    </div>
+
+    <br>
+    <!--            List section-->
+    <div class="container list well">
+        <div class="toDoItem row well" ng-repeat="item in toDoList track by $index">
+            <div class="checkbox col-xs-1">
+                <label>
+                    <input type="checkbox" value="">
+                </label>
+            </div>
+            <div class=" taskInformation col-xs-3 ">Task: <strong>{{item.title}}</strong></div>
+            <div class=" taskInformation col-xs-3 ">
+                Note: <strong>{{item.description}}</strong>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" ng-model="item.title" ng-submit="putData(item)" ng-enter="putData()">
+
+                <input type="text" ng-model="item.description" ng-submit="putData(item)" ng-enter="putData()">
+                <button ng-click='putData()'>Update Task Info</button>
+            </div>
+            <label for="">
+                <button class="btn btn-primary col-xs-1 col-xs-offset-1 removeItem" ng-click="deleteTask(item)">x</button>
+            </label>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

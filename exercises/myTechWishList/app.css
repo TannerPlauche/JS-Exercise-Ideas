@@ -1,0 +1,45 @@
+.myTechNavBar {
+	width: 110VW;
+	height: 10vh;
+	background-color: aquamarine;
+	border: 2px solid white;
+	display: inline-block;
+	font: Garamond;
+	font-weight: bold;
+	color: black
+}
+
+.navButton {
+	border: 2px solid black;
+	height: 9vh;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: cornsilk;
+}
+
+body {
+	background-image: url("https://www.valeopartners.com/sites/default/files/technology%20corporate%20cover%20art.jpg");
+}
+
+.test {
+	font-size: 40px;
+	color: red;
+}
+
+.itemCard {
+	height: 300p;
+	color: white;
+	background-color: burlywood;
+	width: 300px;
+	border-radius: 5px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.itemImage {
+	max-height: 200px;
+	border-radius: 5px;
+}

@@ -1,0 +1,27 @@
+<div class="partialHead">
+<p>{{title}}</p>
+
+
+
+	<div class="row">
+		<div class="col-xs-6 col-xs-offset-3 skillCard">
+			<div class="row">
+				<h3 class="col-xs-3 col-xs-offset-5"><span class="label label-default">{{title}}</span></h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 skillCard">
+			<div class="row">
+				<div class="col-md-6  col-xs-6 thumbnail well" ng-repeat="item in research">
+					<a ng-href="{{item.link}}" target="_blank">
+						<img class="img-responsive" ng-src="{{item.img}}" alt="Skill Logo">
+					</a>
+					<p>{{item.title}}</p>
+					<div>{{item.description}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

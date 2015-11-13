@@ -1,20 +1,11 @@
 .enterToDoArea {
-    height: 200px;
+    height: 80px;
     margin: auto;
     border-top: 50%;
     background-color: darkgoldenrod;
     border-radius: 10px;
     align-content: center;
 }
-
-#inputBar {
-/*
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: firebrick;
-    color: white;
-}
-*/
 
 .toDoItem {
     margin: auto;
@@ -40,4 +31,21 @@
     text-align: center
 }
 
+.container list > div {
+    border: black 2px solid;
+}
 
+/*
+.checkbox {
+    position: absolute;
+    padding-left: 50px;
+}
+*/
+
+.taskInformation {
+    text-wrap: normal;
+}
+
+strong {
+    text-wrap: normal;
+}

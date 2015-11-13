@@ -1,0 +1,31 @@
+.header {
+    height: 50px;
+    background-color: black;
+    font-size: white;
+    text-align: center;
+}
+
+.header .title {
+    margin: auto;
+    color: white;
+}
+
+spaner {
+    color: green;
+}
+
+.openingCrawl {
+    -webkit-marquee: auto medium infinite alternate normal;
+overflow-x: -webkit-marquee;
+}
+
+.filmInformation {
+    background-color: lightslategray;
+    font-size: 20px;
+}
+
+span {
+    color: black;
+    font-size: 25px;
+    background-color: lightgray;
+}

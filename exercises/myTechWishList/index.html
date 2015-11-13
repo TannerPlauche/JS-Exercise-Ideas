@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+	<div class="myTechNavBar row col-xs-12">
+		<p class=" col-xs-2 col-xs-offset-1">MyTechNavBar</p>
+
+		<a href="#/techList">
+			<p class="navButton col-xs-3 col-xs-offset-1">Tech Stuff I want</p>
+		</a>
+
+
+		<a href="#/otherList">
+			<p class="navButton col-xs-3 col-xs-offset-1">Other Cool Things</p>
+		</a>
+
+	</div>
+	<!--End Nav-->
+
+
+	<div ng-view></div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+	<script src="//code.angularjs.org/1.4.7/angular-route.js"></script>
+	<script src=app.js></script>
+	<script src="/js/controllers/myTechList.js"></script>
+	<script src="/js/controllers/otherList.js"></script>
+	<script src="/js/services/services.js"></script>
+
+</body>
+
+</html>

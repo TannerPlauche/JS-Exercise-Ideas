@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Playing with WebKit Marquee</title>
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	</head>
+	<body>
+<header>
+	<h1>Marquee in CSS</h1>
+</header>
+<div class="wrapper">
+<h2>Styles</h2>
+
+<h3>Scroll</h3>
+<div class="marquee scroll">Lollipop topping lemon drops jujubes applicake fruitcake tart liquorice sesame snaps.</div>
+<pre>
+.marquee.scroll {
+	-webkit-marquee: auto medium infinite scroll normal;
+	overflow-x: -webkit-marquee;
+}
+</pre>
+
+<h3>Slide</h3>
+<div class="marquee slide">Lollipop topping lemon drops jujubes applicake fruitcake tart liquorice sesame snaps.</div>
+<pre>
+.marquee.slide {
+	-webkit-marquee: right medium infinite slide normal;
+	overflow-x: -webkit-marquee;
+}
+</pre>
+
+<h3>Alternate</h3>
+<div class="marquee alternate">Lollipop topping lemon drops jujubes applicake.</div>
+<pre>
+.marquee.alternate {
+	-webkit-marquee: left medium infinite alternate normal;
+	overflow-x: -webkit-marquee;
+}
+</pre>
+
+<h2>Direction</h2>
+
+<h3>Forwards</h3>
+<div class="marquee forwards">Lollipop topping lemon drops jujubes applicake fruitcake tart liquorice sesame snaps.</div>
+<pre>
+.marquee.forwards {
+	-webkit-marquee: forwards medium infinite scroll normal;
+	overflow-x: -webkit-marquee;
+}
+</pre>
+
+<h3>Ahead</h3>
+<div class="marquee ahead">Lollipop topping lemon drops jujubes applicake fruitcake tart liquorice sesame snaps.</div>
+<pre>
+.marquee.ahead {
+	-webkit-marquee: ahead medium infinite scroll normal;
+	overflow-x: -webkit-marquee;
+	text-align: center;
+}
+</pre>
+
+<h3>Reverse</h3>
+<div class="marquee reverse">Lollipop topping lemon drops jujubes applicake.</div>
+<pre>
+.marquee.reverse {
+	-webkit-marquee: reverse medium infinite scroll normal;
+	overflow-x: -webkit-marquee;
+	text-align: center;
+}
+</pre>
+
+</div>
+</body>
+</html>

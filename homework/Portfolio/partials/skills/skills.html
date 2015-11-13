@@ -1,0 +1,56 @@
+<p>{{title}}</p>
+<br>
+<div class="row">
+	<div class="col-xs-4 col-xs-offset-4 skillCard">
+		<div class="row">
+
+			<button type="button" class="btn btn-primary btn-lg active col-xs-offset-1" ng-click="switchShowTrue()">{{skillslabel}}</button>
+			<button type="button" class="btn btn-primary btn-lg active col-xs-offset-1" ng-click="switchShowFalse()">{{languages}}</button>
+			<!--
+				<li><a href="" ng-click="switchShowTrue()">{{skillslabel}}</a></li>
+<li><a href="" ng-click="switchShowFalse()">{{languages}}</a></li>
+-->
+		</div>
+	</div>
+</div>
+<br>
+<!--
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3 skillCard">
+		<div class="row">
+			<h3 class="col-xs-3 col-xs-offset-3"><span class="label label-default">{{skillslabel}}</span></h3>
+			<h3 class="col-xs-3"><span class="label label-default">{{languages}}</span></h3>
+		</div>
+	</div>
+</div>
+-->
+<div class="row" ng-show="show">
+	<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 skillCard">
+		<div class="row">
+			<div class="col-md-4 col-xs-6 thumbnail well" ng-repeat="skill in skills">
+				<p>{{skill.title}}</p>
+
+				<img class="img-responsive" ng-src="{{skill.img}}" alt="Skill Logo">
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3 skillCard">
+		<div class="row">
+			<h3 class="col-xs-3 col-xs-offset-4"><span class="label label-default">{{languages}}</span></h3>
+		</div>
+	</div>
+</div>
+-->
+<div class="row" ng-hide="show">
+	<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 skillCard">
+		<div class="row">
+			<div class="col-md-4 col-xs-6 thumbnail well" ng-repeat="lang in languageList">
+				<p>{{lang.title}}</p>
+				<img class="img-responsive" ng-src="{{lang.img}}" alt="lang Logo">
+			</div>
+		</div>
+	</div>
+</div>

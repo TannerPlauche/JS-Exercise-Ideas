@@ -1,0 +1,27 @@
+<p>{{title}}</p>
+
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3 skillCard">
+		<div class="row">
+			<h3 class="col-xs-3 col-xs-offset-4"><span class="label label-default">{{title}}</span></h3>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 skillCard">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-xs-12 thumbnail well" ng-repeat="item in education">
+				<p class="companyName"> {{item.school}}</p>
+				<img class="img-responsive uniLogo" ng-src="{{item.logo}}" alt="University Logo">
+				<p class="jobTitle">{{item.degree}}</p>
+				<div class="jobInfo"> {{item.description}}</div>
+				<br>
+
+				<ul>
+					<li class="jobInfo" ng-repeat="thing in item.accomplishments ">{{thing}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

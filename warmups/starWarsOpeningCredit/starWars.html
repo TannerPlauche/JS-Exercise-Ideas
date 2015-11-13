@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="starWarsCrawl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/starWars.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+    <div class="row">
+        <p class="header col-xs-12">
+            <spaner>Star Wars Wiki</spaner>
+        </p>
+    </div>
+    <div class="row filmInformation">
+
+        <div class="openingCrawl"> <span>Opening crawl:</span> {{starwarsFilm.data.opening_crawl}} </div>
+        <div class="director"><span>Director:</span> {{starwarsFilm.data.director}} </div>
+        <div class="producer"><span>Producer:</span> {{starwarsFilm.data.producer}} </div>
+        <div class="title"><span>Title:</span> {{starwarsFilm.data.title}} </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="js/starWars.js"></script>
+</body>
+
+</html>
+
+<!--
+Data to show:
+opening_crawl
+director
+producer
+title-->

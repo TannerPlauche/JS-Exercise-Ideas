@@ -1,0 +1,117 @@
+.navbar {
+	background-color: azure;
+	height: 75px;
+	margin-bottom: 0;
+}
+
+.navar-brand {
+	margin-left: 300px;
+}
+
+.navbar-nav {
+	margin-right: 100px;
+}
+
+.container {
+	background-size: cover;
+	/*	height: 100vh;*/
+	width: 100vw;
+	background-image: url(http://freephotos.atguru.in/hdphotos/blue-abstract-wallpapers/abstract-blue-dots-hd-wallpaper.jpg);
+	background-position: center;
+	background-repeat: repeat-y;
+}
+
+.mainPartial {
+	background-image: url(http://benwatts.ca/blog/wp-content/uploads/2009/06/aw-yeah-step1.jpg);
+	background-repeat: repeat;
+}
+
+.homeImg {
+	margin: 20px;
+	max-height: 400px;
+}
+
+.hometext {
+	color: white;
+}
+
+p {
+	color: white;
+	background-color: darkgrey;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	text-align: center;
+}
+
+.contactInfo {
+	color: white;
+	background-color: darkgrey;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: left;
+	text-decoration: underline;
+	width: 400px;
+}
+
+.contactSpan {
+	font-weight: bold;
+	color: darkgreen;
+}
+
+
+}
+.companyName {
+	color: white;
+	background-color: darkgrey;
+	font-size: 30px;
+	font-family: sans-serif;
+	text-align: center;
+	text-align: center;
+}
+.jobTitle {
+	color: white;
+	background-color: darkgrey;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	text-align: center;
+}
+.jobInfo {
+	text-align: left;
+	font-family: Garamond;
+	font-size: 17px;
+}
+.img-responsive {
+	max-height: 200px;
+}
+.uniLogo {
+	max-height: 125px;
+}
+.aboutMe {
+	color: black;
+}
+.aboutMeImg {
+	max-height: 200px;
+	margin-right: 0;
+	margin-left: 400px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+.aboutMeImages {
+	display: inline-block;
+	border: 1px solid gray;
+	padding: 4px;
+	text-align: center;
+}
+ul {
+	margin: 10px;
+}
+
+/*
+.skillCard {
+	height: 150px;
+	width: 125px;
+	background-color: white;
+}*/

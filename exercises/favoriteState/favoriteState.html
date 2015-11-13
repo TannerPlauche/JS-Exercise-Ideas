@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyStatesApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Georgia is the Best</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+	<h3>Just Peachy!
+	<a href="#/Home">Home</a>
+	<a href="#/AboutGeorgia">About</a>
+	<a href="#/WhyILoveGeorgia">Why I love</a>
+</h3>
+
+	<hr>
+	<div ng-view>
+	</div>
+
+
+	<hr>
+	<h3>Footer</h3>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+	<script src="//code.angularjs.org/1.4.5/angular-route.js"></script>
+	<script src="js/app.js" /></script>
+	<script src="/js/homeController.js"></script>
+	<script src="/js/aboutController.js"></script>
+	<script src="/js/whyController.js"></script>
+</body>
+
+</html>

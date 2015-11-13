@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BronyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MyLittleBrony</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/brony.css">
+</head>
+
+<body ng-controller="bronyController">
+    <div class="container">
+        <div class="row">
+
+            <input class="col-xs-4 col-xs-offset-1" ng-model="currentPonyNumber" type="text" placeholder="Enter a number to look up a pony.">
+            <input class="col-xs-4 col-xs-offset-1" ng-model="newPony.name" type="text" placeholder="New Pony Name">
+            <div>{{currentPonyNumber}}</div>
+        </div>
+        <div class="row">
+            <button class="col-xs-1 col-xs-offset-2 btn" ng-click="updateCurrentPony()">UpdatePony</button>
+            <div>{{currentPonyReferenceNumber}}</div>
+            <input class="col-xs-4 col-xs-offset-3" ng-model="newPony.img" type="text" placeholder="New Pony Image URL">
+        </div>
+        <div class="row">
+            <div>{{currentPonyReferenceNumber}}</div>
+            <input id="newPonyInput" class="col-xs-4 col-xs-offset-6" ng-model="newPony.userName" type="text" placeholder="User name">
+        </div>
+        <div class="row">
+            <button class="col-xs-2 col-xs-offset-6 btn" ng-click="addPonyToFavorites()">Add New Pony to Favs</button>
+        </div>
+        <!--        display pony from look up here::::::-->
+        <div class="row">
+            <div class="currentPonyName col-xs-2 col-xs-offset-2">{{currentPony.name}}</div>
+            <div class="currentfavoritePonyName col-xs-2 col-xs-offset-2">{{currentFavoritePony.name}}</div>
+        </div>
+        <div class="row">
+            <img class="col-xs-2 col-xs-offset-2" ng-src={{currentPony.img}} alt="">
+            <img class="col-xs-2 col-xs-offset-2" ng-src={{currentFavoritePony.img}} alt="">
+
+        </div>
+        <div class="row">
+            <button class="col-xs-2 col-xs-offset-2 btn">Remove Pony</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="js/brony.js"></script>
+    <script src="js/services/modelService.js"></script>
+    <script src="js/services/modelManager.js"></script>
+</body>
+
+</html>
+
+
+
+<!--
+
+Show the list of 50 pre-populated pony objects (show name and image)
+Show the list of user-added favorite ponies
+Allows a user to add the name, username and img url of their favorite pony
+Each favorite pony has a button that allows it to be deleted
+-->
