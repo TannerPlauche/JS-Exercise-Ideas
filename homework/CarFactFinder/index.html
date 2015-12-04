@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1 class="headerTitle">Used Car Spec Search<h1>
+
+			</div>
+		<h3 class="navbar navbar-right">A place to look up and save cars you are interested in</h3>
+		</div>
+	</nav>
+
+	<div ng-controller="MainController">
+		<div class="row">
+			<div class="col-sm-2 col-sm-offset-2" >
+				<select class="form-control well" ng-model="selectedYear" ng-change="getMakes(selectedYear)" ng-options="year for year in yearsAvailable">
+					<option value="">Year</option>
+				</select>
+			</div>
+			<div class="col-sm-2">
+				<select class="form-control" ng-model="selectedMake" ng-change="getModels(selectedYear, selectedMake)" ng-options="make as make for make in makesAvailable">
+					<option value="">Make</option>
+				</select>
+			</div>
+			<div class="col-sm-2">
+				<select class="form-control" ng-model="selectedModel" ng-change="getTrims(selectedYear, selectedMake, selectedModel)" ng-options="model as model for model in modelsAvailable">
+					<option value="">Model</option>
+				</select>
+			</div>
+			<div class="col-sm-2">
+				<select class="form-control" ng-model="selectedTrim" ng-change="getSpecificModel(selectedTrim)" ng-options="trim.modelID for trim in trimsAvailable">
+					<option value="">Trims</option>
+				</select>
+			</div>
+			
+		</div>
+		<br>
+		<br>
+		<div class="row"></div>
+		<div ng-hide="showDetails" class=" prepList row col-sm-5 col-md-5 col-xs-offset-1">
+		<h1>Look up cars Here! </h1>
+                <h1>
+		Save them to a list and check them out later
+		</h1>
+                <h3>Select a year, make, model, and trim. You can then save and reference your best options</h3>
+            </div>
+            <div ng-show="showDetails" class=" detailsList row col-sm-5">
+                <div>
+                    <div class="row col-sm-5">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Info</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Make: </td>
+                                    <td>{{ specificModelDetails.make }} </td>
+                                </tr>
+                                <tr>
+                                    <td>Model: </td>
+                                    <td>{{specificModelDetails.model}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Trim: </td>
+                                    <td>{{specificModelDetails.trim}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Drive: </td>
+                                    <td>{{specificModelDetails.year}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Drive: </td>
+                                    <td>{{specificModelDetails.driveType}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Cylinders:</td>
+                                    <td>{{specificModelDetails.cylinders}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Horsepower:</td>
+                                    <td>{{specificModelDetails.horsePower}} </td>
+                                </tr>
+                                <tr>
+                                    <td>MPG City:</td>
+                                    <td>{{specificModelDetails.mpgCity}} </td>
+                                </tr>
+                                <tr>
+                                    <td>MPG HW: </td>
+                                    <td>{{specificModelDetails.mpgHW}} </td>
+                                </tr>
+                                <tr>
+                                    <td>MPG Combined:</td>
+                                    <td>{{specificModelDetails.model_id}} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--
+			<ul>
+	<li>{{specificModelDetails.year}} {{ specificModelDetails.make }} {{specificModelDetails.model}} {{specificModelDetails.trim}}</li>
+	<li>Drive: {{specificModelDetails.driveType}} </li>
+	<li>Cylinders: {{specificModelDetails.cylinders}} </li>
+	<li>Horsepower: {{specificModelDetails.horsePower}} </li>
+	<li>MPG City: {{specificModelDetails.mpgCity}} </li>
+	<li>MPG HW: {{specificModelDetails.mpgHW}} </li>
+	<li>MPG Combined: {{specificModelDetails.mpgCombined}} </li>
+	<li>Model Reference: {{specificModel.model_id}}</li>
+-->
+                    <div class="row">
+                        <div class="col-sm-1 col-s-offset-2">
+                            <button class="btn btn-primary" ng-click="addCartoWantList(specificModelDetails)">Add to Favorites</button>
+                        </div>
+                        <!--</ul>-->
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-sm-3 col-sm-offset-8 well">
+                <h3>Cars I'm Interested In</h3>
+                <div class="carCard" ng-repeat="car in carsIWant track by $index">
+                    <div>
+                        <h5>{{car.year}} {{ car.make }} {{car.model}} {{car.trim}}</h5>
+
+                        <p><span>Drive:</span> {{car.driveType}} </p>
+                        <p><span>Cylinders:</span> {{car.cylinders}} </p>
+                        <p><span>Horsepower:</span> {{car.horsePower}} </p>
+                        <p><span>MPG City:</span> {{car.mpgCity}} </p>
+                        <p><span>MPG HW:</span> {{car.mpgHW}} </p>
+                        <p><span>MPG Combined:</span> {{car.mpgCombined}} </p>
+                        <p><span>Model Reference:</span> {{car.model_id}}</p>
+
+                        <button class="btn btn-danger" ng-click="removeCar(car)">remove</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+        </div>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src=app.js></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<div class="row">
+
+  <div class="row class col-xs-3 col-xs-offset-5">
+    <button ng-click="updateBounties()" class="btn ">Update</button>
+  </div>
+
+
+  <div class="col-xs-4 col-md-5 list col-md-offset-1" ng-repeat="bounty in currentBounties track by $index">Bounties I want
+    <div class="bountyCard">
+      <h2>{{bounty.firstName}} {{bounty.lastName}}</h2>
+      <img class="bountyImage" ng-src="{{bounty.image}}" alt="">
+      <li>WANTED: {{bounty.status.title}}</li>
+      <li>AMOUNT: {{bounty.amount}}</li>
+      <li>TYPE: {{bounty.type}}</li>
+      <div class="row">
+        <div class="col-xs-1 "></div>
+        <button class="btn btn-info btn-sm danger" ng-click="ToggleBounty()">Edit</button>
+        <div class="col-xs-1 "></div>
+        <button class="btn btn-info btn-sm danger" ng-click="delete(bounty._id)">Completed</button>
+        <div class="col-xs-1 "></div>
+        <button class="btn btn-info btn-sm danger" ng-click="delete(bounty._id)">Remove</button>
+      </div>
+
+      <div class="editBountySec" ng-hide="editBountyToggle">
+
+        <div class="col-xs-6 col-xs-offset-3">
+          <label for="">Bounty: First Name</label>
+          <input ng-model="bounty.firstName" class="form-control" placeholder="First Name of Bounty" type="text">
+
+          <label for="">Bounty: Last Name</label>
+          <input ng-model="bounty.lastName" class="form-control" placeholder="Last Name of Bounty" type="text">
+
+
+          <label for="">Bounty: Image</label>
+          <input ng-model="bounty.image" class="form-control" placeholder="Last Name of Bounty" type="text">
+
+
+          <select class="form-control" ng-options="option as option.title for option in livingOptions" ng-model='bounty.living' name="" id="">
+            <option value="">SELECT STATUS</option>
+          </select>
+          <select class="form-control" ng-options="amount as amount for amount in amountOptions" ng-model="bounty.amount" name="" id="">
+            <option value="">SELECT AMOUNT</option>
+          </select>
+          <select class="form-control" ng-options="type as type for type in typeOptions" ng-model="bounty.type" name="" id="">
+            <option value="">SELECT TYPE</option>
+          </select>
+          {{living}} {{amount}}
+
+          <button ng-click="editBounty(bounty)" class="btn">Update Bounty</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

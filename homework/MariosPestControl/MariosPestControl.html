@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MariosPestControl</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="MariosPestControl.css">
+
+
+</head>
+<body style="background-color: #85D6FF">
+  <h1 style = 'color: red'>Mario's Pest Control</h1>
+  <p class='listOfItems'>Prices</p>
+  <p class='break'></p>
+  <p class='break'></p>
+    <div class = 'container'>
+      <div class ='col-xs-12 col-md-4'>
+        <button id = 'goombaButton' class ='img-circle'> +1</button>
+      </div>
+      <div class ='col-xs-12 col-md-4'>
+        <button id ='bobombButton' class ='img-circle'>+1  </button>
+      </div>
+      <div class ='col-xs-12 col-md-4'>
+        <button id='cheepcheepButton' class ='img-circle'> +1</button>
+      </div>
+      <div class ='col-xs-12 col-md-4'>
+        <div id= 'priceDiv' >
+          <p>Goombas</p> <p>5 coins each</p>
+        </div>
+        </div>
+          <div class ='col-xs-12 col-md-4'>
+        <div id= 'priceDiv' class ='col-xs-12 col-md-4'>
+          <p>Bob-ombs</p> <p >7 coins each</p>
+        </div>
+          </div>
+          <div class ='col-xs-12 col-md-4'>
+        <div id= 'priceDiv' class ='col-xs-12 col-md-4'>
+          <p>Cheep Cheeps</p> <p>11 coins each</p>
+        </div>
+      </div>
+
+    </div>
+  <p class='break'></p>
+  <p class='break'></p>
+  <!-- <p class='yourTotal'>Your Total</p> -->
+  <div class = 'container'>
+    <div class="col-xs-0 col-md-4" id = 'blankSpacer1'> <div class = 'btn button-default' id = 'clearButton'> Clear </div> </div>
+    <div class="col-xs-12 col-md-4" id='totalCostDiv'>
+      <p id = 'totalPriceLabel'>Your Total</p>
+      <P id = 'goombasKilled' >Goombas Killed:</P>
+        <P id = 'goombasTotal' >Goomba Amount Due:</P>
+      <P id = 'bobombsKilled' >bob-omb Killed:</P>
+      <P id = 'bobombsTotal' >bob-omb Amount Due:</P>
+      <P id = 'cheepcheepsKilled' >Cheep Cheeps Killed:</P>
+      <P id = 'cheepcheepsTotal' >Cheep Amount Due:</P>
+
+      <p class='break'></p>
+      <p class='break'></p>
+      <P id = 'totalCoinCost'>Total Coins Due:</P>
+
+    </div>
+    <div class="col-xs-0 col-md-4" id = 'blankSpacer'></div>
+
+
+  </div>
+
+
+<div class = 'col-xs-12' id='footer'><li>Email: Mario@MariosPestControl.com</li> <li>Web: www.MarioStopsPests.mar</li> <li>Mail: 1800 Pennsylvania Ave,</li><l> District of Columbia, 19382</l> </div>
+
+<script src='MariosPestControl.js'> </script>
+</body>
+</html>

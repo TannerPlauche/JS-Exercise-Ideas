@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div class="container-fluid" ng-controller="MainController">
+    <div class="header row">
+      <a href="#/home">
+        <div class="col-sm-3"><strong>My Bounty List</strong></div>
+      </a>
+      <a href="#/enterBounty">
+        <div class="col-sm-3">Enter New Bounties</div>
+      </a>
+      <a href="#/currentBounties">
+        <div class="col-sm-2">Current Bounties</div>
+      </a>
+      <a href="#/completeBounties">
+        <div class="col-sm-3">Completed Bounties</div>
+      </a>
+    </div>
+
+    <div ng-view></div>
+
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+  <script src="//code.angularjs.org/1.4.7/angular-route.js"></script>
+  <script src=route.js></script>
+  <script src=app.js></script>
+</body>
+
+</html>

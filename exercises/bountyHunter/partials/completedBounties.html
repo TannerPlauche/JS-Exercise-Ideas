@@ -1,0 +1,29 @@
+<div class="row">
+  <h1>Completed Bounties</h1>
+  <div class="row class col-xs-3 col-xs-offset-5">
+    <button ng-click="updateBounties()" class="btn ">Update</button>
+  </div>
+
+
+  <div class="col-xs-4 col-md-5 list col-md-offset-1" ng-repeat="bounty in currentBounties track by $index">Bounties I want
+
+    <div>
+      <div class="bountyCard">
+        <h2>{{bounty.firstName}} {{bounty.lastName}}</h2>
+        <img class="bountyImage" ng-src="{{bounty.image}}" alt="">
+        <li>WANTED: {{bounty.status.title}}</li>
+        <li>AMOUNT: {{bounty.amount}}</li>
+        <li>TYPE: {{bounty.type}}</li>
+        <div class="row">
+          <div class="col-xs-1 "></div>
+          <button class="btn btn-info btn-sm danger" ng-click="delete(bounty._id)">Edit</button>
+          <div class="col-xs-1 "></div>
+          <button class="btn btn-info btn-sm danger" ng-click="delete(bounty._id)">Completed</button>
+          <div class="col-xs-1 "></div>
+          <button class="btn btn-info btn-sm danger" ng-click="delete(bounty._id)">Remove</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

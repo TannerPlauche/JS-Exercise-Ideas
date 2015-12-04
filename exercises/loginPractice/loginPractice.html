@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+
+<body ng-controller="MainController">
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <div class="row" ng-init="chosenCountry = {name: 'No country chosen', population: 0}">
+
+            <div class="col-md-4 form-group">
+
+                <select ng-model="chosenCountry" class="form-control" ng-options="country.name for country in countries" ng-change="countryChanged()">
+
+                    <option value="">Choose a country</option>
+
+                </select>
+
+                <h2>Country: {{ chosenCountry.name }}</h2>
+                <h3>Population: {{ chosenCountry.population | number }} people</h3>
+
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label for="">Email Address</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label for="">Confirm Email Address</label>
+                <input type="text" class="form-control" ng-paste="$event.preventDefault()">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" ng-focus="passwordHints = true" ng-blur="passwordHints = false">
+            </div>
+
+            <div class="col-md-4" ng-show="passwordHints">
+                <ul>
+                    <li class="text-danger">Password should be longer than 8 characters</li>
+                    <li class="text-danger">Password should contain at least 1 symbol</li>
+                    <li class="text-danger">Password should contain a mixture of capital and lowercase letters</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" ng-paste="$event.preventDefault()">
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

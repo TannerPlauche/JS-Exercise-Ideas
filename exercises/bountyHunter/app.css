@@ -1,0 +1,60 @@
+.header {
+  height: 75px;
+  text-align: center;
+  font-family: Garamond;
+  font-size: 25px;
+  background-color: dodgerblue;
+  padding-top: 15px;
+  border-radius: 5px;
+  position: static;
+  font-family: Arial;
+}
+
+a {
+  color: black;
+}
+
+.homeBase {
+  height: 100vh;
+  background-image: url('images/bobaFett.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: wheat;
+  font-family: Arial;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.list {
+  text-align: center;
+}
+
+.updateButton {
+  margin-left: 70px;
+}
+
+select {
+  margin-top: 10px;
+}
+
+.bountyCard {
+  border: 1px black solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: dimgray;
+  font-family: Garamond;
+  font-size: 25px;
+  color: white;
+}
+
+.bountyImage {
+  max-height: 100px;
+}
+
+.editBountySec {
+  border: 1px black solid;
+  border-radius: 5px;
+  background-color: beige;
+}

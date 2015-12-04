@@ -1,0 +1,44 @@
+.header.title {
+	text-align: center;
+}
+
+.navbar-right {
+	margin-right: 100px;
+}
+
+body {
+	background-image: url("http://p1.pichost.me/i/71/1961593.jpg");
+	background-repeat: repeat;
+}
+
+.detailsList {
+	background-color: darkcyan;
+	border: 1px darkcyan solid;
+	border-radius: 20px;
+	position: absolute;
+	z-index: 100;
+	opacity: .8;
+}
+
+.prepList {
+	background-color: darkcyan;
+	height: 400px;
+	border: 1px darkcyan solid;
+	border-radius: 20px;
+	position: absolute;
+	z-index: 100;
+	text-align: center;
+	padding-top: 50px;
+	opacity: .7;
+}
+
+.carCard {
+	border: 3px darkcyan solid;
+	border-radius: 5px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+span {
+	font-weight: bold;
+}

@@ -1,0 +1,40 @@
+<div class="col-xs-4 col-xs-offset-4">
+  <h2>Add New <span class="label label-default" ng-click="">New</span></h2>
+  <button class="button btn-primary">Enter New Poem</button>
+</div>
+
+<div>
+  <form ng-hide="{{enterPoemForm}}" action="">
+    <input ng-model="newPoemTitle" placeholder="Title" type="text">
+    <input ng-model="newPoemTitle" placeholder="Author" type="text">
+    <textarea ng-model="newPoemTitle" placeholder="Enter your poem" class="form-control" rows="3"></textarea>
+  </form>
+</div>
+
+<div class='col-xs-6 col-xs-offset-3'>
+  <!--
+  <h3>{{poem.title}}</h3>
+<h4>{{poem.poem}}</h4>
+<h5>{{poem._id}}</h5>-->
+
+
+  <table class="table well table-bordered table-hover  ">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+
+    </tr>
+    <tr ng-repeat="poem in haikuList">
+      <td>
+        <a ng-href="#/type/haiku/{{poem._id}}">{{poem.title}}</a>
+      </td>
+      <td>
+        {{poem.author}}
+      </td>
+
+    </tr>
+  </table>
+</div>
+
+
+<poem-directive></poem-directive>
