@@ -23,7 +23,6 @@ var timer= document.getElementById('timer')
 			return ;
 		};
 
-
 	}
 
 	var stopTime = function () {
