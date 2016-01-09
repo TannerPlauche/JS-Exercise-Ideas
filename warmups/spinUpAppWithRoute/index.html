@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header row">
+      <div><a href="#/home">Tanner's website</a></div>
+      <div><a href="#/about">Learn about Tanner</a></div>
+      <div><a href="#/spokenLangs">Langauges I speak</a></div>
+      <div><a href="#/studiedLangs">Langauges I've studied</a></div>
+      <div> <a href="#/contact">contact</a> </div>
+    </div>
+
+
+    <div ng-view></div>
+
+    <!--End of main container-->
+  </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/route.js"></script>
+</body>
+
+</html>

@@ -13,10 +13,10 @@ app.config(function ($routeProvider) {
   }).when("/guidelines", {
     templateUrl: "partials/guidelines.html",
     controller: "MainController"
-  }).when("/type/haiku", {
+  }).when("/haiku", {
     templateUrl: "partials/haiku.html",
     controller: "MainController"
-  }).when("/type/haiku/:haikuID", {
+  }).when("/:poemId", {
     templateUrl: "partials/individualPoem.html",
     controller: "MainController"
   })
