@@ -1,30 +1,28 @@
 var app = angular.module("etsyApp");
 
-app.service("decorService", ["$http", function ($http) {
-	//Array where listingData and corresponding images will be pushed. 
-	var baseUrl = "https://openapi.etsy.com/v2/";
-	var shopUrl = "shops/Plauche/"
-	var listingsUrl = "listings/";
-	var apiKey = "api_key=87yw7tt8c9cnwmqx70gpmyaq"
+app.service("DecorService", ["$http", function ($http) {
+  //Array where listingData and corresponding images will be pushed. 
+  //  var baseUrl = "https://openapi.etsy.com/v2/";
+  //  var shopUrl = "shops/Plauche/";
+  //  var listingsUrl = "listings/";
+  //  var apiKey = "api_key=87yw7tt8c9cnwmqx70gpmyaq"
 
-	this.listings = []; + images
 
-	$http.get("https://openapi.etsy.com/v2/shops/Plauche/listings/active?api_key=87yw7tt8c9cnwmqx70gpmyaq").then(function (response) {
-		////what to do with data
-		this.listingsData = response.data;
-		for
-		get(https: openapi.etsy.com / v2 / listings / +
-			var +/images?api_key=87yw7tt8c9cnwmqx70gpmyaq )
+  this.getListings = function () {
+    return $http.jsonp("https://openapi.etsy.com/v2/shops/Plauche/listings/active.js?callback=JSON_CALLBACK&api_key=87yw7tt8c9cnwmqx70gpmyaq")
+      .then(function (response) {
+        return response.data;
+      })
+  };
 
-		}, {
-			////insert error response here
-			function (response) {
-				alert("Request Failed: Status:" + response.status + " code: " +
-					response.statusCode + " text: " + response.statusText);
-			}
-		}
 
-	});
+  this.getTestImages = function () {
+    return $http.get("https://openapi.etsy.com/v2/listings/255797703/images?api_key=87yw7tt8c9cnwmqx70gpmyaq")
+      .then(function (response) {
+        return response.data;
+      })
+  }
+
 
 }]);
 
