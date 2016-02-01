@@ -22,6 +22,13 @@ angular.module("etsyApp")
         })
     }
 
+    //    this.getTestImages = function () {
+    //      return $http.jsonp("https://openapi.etsy.com/v2/listings/255797703/images?callback=JSON_CALLBACK&api_key=87yw7tt8c9cnwmqx70gpmyaq")
+    //        .then(function (response) {
+    //          return response.data;
+    //        })
+    //    }
+
 
 }]);
 

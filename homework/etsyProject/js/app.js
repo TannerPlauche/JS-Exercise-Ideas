@@ -5,7 +5,7 @@ var app = angular.module("etsyApp", ["ngRoute"]);
 
 app.controller("MainController", ["$scope", "DecorService", function ($scope, DecorService) {
 
-  $scope.test = "If you can see this you have reached the controller";
+  //  $scope.test = "If you can see this you have reached the controller";
 
 
 
